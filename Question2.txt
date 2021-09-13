@@ -1,0 +1,39 @@
+
+  Question--> Median of two sorted arrays
+
+	public static int Solution(int[] arr1, int[] arr2)
+	{        Arrays.sort(arr2);
+
+                int i = arr1.length;
+		int j = arr2.length;
+
+                int[] arr3 = new int[i + j];
+
+                System.arraycopy(arr1, 0, arr3, 0, i);
+		System.arraycopy(arr2, 0, arr3, i, j);
+
+                Arrays.sort(arr3);
+		int n = arr3.length;
+		
+		
+		if (n % 2 == 0)
+		{
+			int k = n / 2;
+			int a = arr3[k];
+			int b = arr3[k - 1];
+
+			int result = (a + b) / 2;
+			return result;
+		}
+		
+		
+		else
+		{
+			int c = Math.round(n / 2);
+			return arr3[c];
+		}
+	}
+
+	
+	
+
