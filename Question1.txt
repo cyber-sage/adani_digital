@@ -1,0 +1,26 @@
+const sortNobel=(Input)=>{
+  const output=[];
+const  Physics_2019= array.filter((obj) => obj.category === Physics && year===2019);
+
+ const len=Physics_2019.length;
+const map1 = new Map();
+
+ Physics_2019.forEach((obj)=>{
+
+        if( map1.has(obj.research))
+        map1.set(obj.name,map1.get(obj.research)+(1/len));
+        else 
+        map1.set(obj.name,1/len);
+
+    });
+
+   let m2= new Map([...map.entries()].sort((a,b) => b[1] - a[1]));
+
+     
+
+
+
+
+
+
+}
