@@ -1,5 +1,7 @@
 const sortNobel=(Input)=>{
   const output=[];
+
+ 
 const  Physics_2019= array.filter((obj) => obj.category === Physics && year===2019);
 
  const len=Physics_2019.length;
@@ -16,9 +18,21 @@ const map1 = new Map();
 
    let m2= new Map([...map.entries()].sort((a,b) => b[1] - a[1]));
 
-     
+     let winners=[];
+    const Iterator1=m2.keys();
+    Iterator1.forEach((k)=>{
+       winner.push({name:k,share:m2.get(k)})      
+       })
 
+        const data={
+          category: 'Physics',
 
+    year: 2019,
+     winner
+
+       };
+
+ output.push(data);
 
 
 
